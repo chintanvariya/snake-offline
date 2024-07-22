@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1768276262531890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224871769639816630}
+  - component: {fileID: 222270649043682150}
+  - component: {fileID: 114276769721457132}
+  - component: {fileID: 114613251576345354}
+  m_Layer: 5
+  m_Name: Tile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &224871769639816630
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768276262531890}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 10, y: -10}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &222270649043682150
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768276262531890}
+  m_CullTransparentMesh: 1
+--- !u!114 &114276769721457132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768276262531890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ee4adf5488159e946ac6312239ae00e2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &114613251576345354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768276262531890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cfe7640627e58b439830e2294849cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Empty: {fileID: 21300000, guid: ee4adf5488159e946ac6312239ae00e2, type: 3}
+  Apple: {fileID: 21300000, guid: f89849944377447d6b2ca5b19a8bf4f1, type: 3}
+  SnakesHead: {fileID: 21300000, guid: 06fa7d2e8e5444f49b68a635dbf976ed, type: 3}
+  SnakesBody: {fileID: 21300000, guid: 55346ee51dd1be943898a8f8179b59ad, type: 3}
+  SnakesTail: {fileID: 21300000, guid: a88fb297e3aa31946abf0d9ee7c921a7, type: 3}
+  SnakesBulge: {fileID: 21300000, guid: a0206300379b0fe42ab351fe5c66ef8f, type: 3}
+  SnakesL: {fileID: 21300000, guid: a42316dde9c8f0149a00a9f6209ca4a0, type: 3}
+  SnakesLBulged: {fileID: 21300000, guid: 09bb96001e1143e4fb3872ae619c53fc, type: 3}
+  Bonuses:
+  - {fileID: 21300000, guid: 5cb3ac8adc2f943ae96f4d4cd519adea, type: 3}
+  - {fileID: 21300000, guid: 3850872263c284d42aec31e6c1a3cf1a, type: 3}
+  - {fileID: 21300000, guid: 4712821ff739f4c17ad39e8e46615624, type: 3}
+  - {fileID: 21300000, guid: bdb8d5653f17f48e6b8f6073c5304561, type: 3}
+  - {fileID: 21300000, guid: 4ffdf78ffd7a94943919ca6f9a9db2d8, type: 3}
+  - {fileID: 21300000, guid: 7e185b11ed746467d9a4e08056c750f7, type: 3}
+  - {fileID: 21300000, guid: 498842be32fb04507ad7e855314c8aa2, type: 3}
+  - {fileID: 21300000, guid: 51fe8e3c157f2448db9d77805eb3feb6, type: 3}
+  - {fileID: 21300000, guid: 172b8cea2688f4c4f9e6caae3fc59b00, type: 3}
+  - {fileID: 21300000, guid: e6c30480002b74851a601840c0fb252c, type: 3}
+  - {fileID: 21300000, guid: bce69d15264a943b286167ad31bed09f, type: 3}
