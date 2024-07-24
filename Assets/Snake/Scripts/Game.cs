@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GoogleMobileAds.Api;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -218,14 +219,46 @@ public class Game : MonoBehaviour
         GameOver.gameObject.SetActive(true);
     }
 
+    private void OnEnable()
+    {
+        GoogleMobileAds.Sample.InterstitialAdController.OnInterstitialAdFullScreenContentClosed += OnInterstitialAdFullScreenContentClosed;
+        GoogleMobileAds.Sample.InterstitialAdController.OnInterstitialAdFullScreenContentFailed += OnInterstitialAdFullScreenContentFailed;
+        GoogleMobileAds.Sample.InterstitialAdController.OnInterstitialAdNotReady += OnInterstitialAdNotReady;
+    }
+    private void OnDisable()
+    {
+        GoogleMobileAds.Sample.InterstitialAdController.OnInterstitialAdFullScreenContentClosed -= OnInterstitialAdFullScreenContentClosed;
+        GoogleMobileAds.Sample.InterstitialAdController.OnInterstitialAdFullScreenContentFailed -= OnInterstitialAdFullScreenContentFailed;
+        GoogleMobileAds.Sample.InterstitialAdController.OnInterstitialAdNotReady -= OnInterstitialAdNotReady;
+    }
+
+    private void OnInterstitialAdNotReady() => GameStart();
+
+    private void OnInterstitialAdFullScreenContentFailed(AdError error) => GameStart();
+
+    private void OnInterstitialAdFullScreenContentClosed() => GameStart();
+
+    public bool IsGameStart;
+
+    public void GameStart()
+    {
+
+        HideAllPanels();
+        Restart();
+        GamePanel.gameObject.SetActive(true);
+    }
+
     /// <summary>
     /// Shows the board and starts the game.
     /// </summary>
     public void StartGame()
     {
-        HideAllPanels();
-        Restart();
-        GamePanel.gameObject.SetActive(true);
+        if (IsGameStart)
+            GoogleMobileAds.Sample.InterstitialAdController.ShowInterstitialAd();
+        else
+            GameStart();
+
+        IsGameStart = true;
     }
 
     /// <summary>
